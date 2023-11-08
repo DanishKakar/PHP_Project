@@ -9,20 +9,20 @@
 <body>
 
 <div class="container">
-<form action="welcome.php" method="<?php echo $_SERVER["PHP_SELF"];?>">
+<form action="welcome.php" method="post">
   <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>
+    <label for="">Name</label>
     <input type="text" class="form-control" name="name" placeholder="Enter Your Name">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Email</label>
-    <input type="email" class="form-control" name="email" placeholder="Email">
+    <label for="">Email</label>
+    <input type="email" class="form-control" name="email" placeholder="Your Email">
   </div>
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
 

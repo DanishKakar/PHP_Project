@@ -1,4 +1,34 @@
+<?php
+// define variables and set to empty values
+$name = $email = $lname =  "";
+$nameErr = $emailErr = "";
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  if(empty($_POST["name"])) {
+
+      $nameErr = "Name is required";
+  } elseif(strlen($_POST["name"]) < 5) {
+      $nameErr = "Name should be greater than 5!";
+  } else {
+    $name = test_input($_POST["name"]);
+  }
+
+
+  if(empty($_POST["$email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,24 +39,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <h1 style="text-align:center">Welcome User</h1>
-    
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td scope="row"><?php echo $_GET['name']; ?></td>
-                <td ><?php echo $_GET['email']; ?></td>
-                <td>delete</td>
-            </tr>
-        </tbody>
-    </table>
-    
+    <span class="error"><?php echo $nameErr ?></span><br>
+    <span class="error"><?php echo $emailErr ?></span><br>
 </body>
 </html>
