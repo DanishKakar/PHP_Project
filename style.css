@@ -1,0 +1,25 @@
+
+body {
+    background-color: lightblue;
+}
+.card {
+    border: none;
+    background-color: white;
+    color: black;
+    background-repeat: repeat;
+    height: 400px;
+}
+
+#div1 {
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 20px 0 20px 0;
+}
+
+#link > li > a {
+    text-decoration: none;
+    text-transform: none;
+}
+
+h2 {
+    text-shadow: 2px 2px 5px rgb(187, 35, 169);
+}
