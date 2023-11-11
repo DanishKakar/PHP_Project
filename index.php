@@ -5,33 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Project</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
 <div class="container">
-<form action="welcome.php" method="post">
-  <div class="form-group">
-    <label for="">Name</label>
-    <input type="text" class="form-control" name="name" placeholder="Enter Your Name">
+
+<h1 class="text-center">Cards</h1>
+<div class="card col-sm-6 col-xs-12 col-md-4 col-lg-3" id="div1">
+  <div class="card-body">
+    <h2 class="card-title text-center">Login</h2>
+    <p class="card-text">Some example text. Some example text.</p>
+    <form action="">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" name="username" class="form-control" required>
+      </div>
+      <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" class="form-control" required> 
+          <br>   
+          <a href="">forgot-password</a>                      
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary float-center">Login</button>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="">Email</label>
-    <input type="email" class="form-control" name="email" placeholder="Your Email">
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-</form>
 </div>
-
-    <?php
-
-        $name = "Danish Kakar";
-        echo "<h2>$name</h2>";
-        echo "<hr>";
-    ?>
+</div>
         
 </body>
 </html>
